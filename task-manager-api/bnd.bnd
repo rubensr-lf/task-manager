@@ -1,0 +1,10 @@
+Bundle-Name: task-manager-api
+Bundle-SymbolicName: com.rubensr.tm.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.rubensr.tm.exception,\
+	com.rubensr.tm.model,\
+	com.rubensr.tm.service,\
+	com.rubensr.tm.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../task-manager-service/service.xml

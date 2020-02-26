@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.rubensr.tm">
+	<author>Ruben Sanchez</author>
+	<namespace>TM</namespace>
+	
+	<entity local-service="true" name="Task" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="taskId" primary="true" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="status" type="int" />
+		<column name="finishDate" type="Date" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="status"/>
+			<order-column name="createDate"/>
+			<order-column name="title"/>
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="C_U" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="userId" />
+		</finder>
+
+	</entity>
+</service-builder>

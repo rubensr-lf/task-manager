@@ -1,0 +1,16 @@
+.gradle/
+build/
+target/
+**/*.iml
+**/.ivy
+**/.classpath
+**/.project
+**/.sass-cache
+**/.settings
+**/bin
+**/build
+**/build_gradle
+**/node_modules
+**/test-coverage
+**/tmp
+**/.web_bundle_build
